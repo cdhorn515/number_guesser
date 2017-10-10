@@ -4,7 +4,7 @@ import random
 guessesLeft = 5
 guesses = 0
 
-numberToGuess = random.randint(1, 10)
+numberToGuess = random.randint(1, 101)
 
 while guessesLeft > 0:
     userGuess = int(input("Please enter a number between 1 and 100: "))
