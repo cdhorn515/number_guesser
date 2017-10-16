@@ -26,8 +26,6 @@ def main():
 def ask_to_play_again():
     answer = input("Do you want to play again? (Type Y or N) ")
     if answer == "Y" or answer == "y":
-        # guesses = 0
-        # guessesLeft = 5
         main()
     elif answer == "N" or answer == "n":
         print("Thanks for playing!")
