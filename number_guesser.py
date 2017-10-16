@@ -2,25 +2,25 @@
 import random
 
 def main():
-    guessesLeft = 5
+    guesses_left = 5
     guesses = 0
 
-    numberToGuess = random.randint(1, 100)
+    number_to_guess = random.randint(1, 100)
 
-    while guessesLeft > 0:
-        userGuess = int(input("Please enter a number between 1 and 100: "))
+    while guesses_left > 0:
+        user_guess = int(input("Please enter a number between 1 and 100: "))
         guesses += 1
-        guessesLeft -= 1
+        guesses_left -= 1
 
-        if userGuess == numberToGuess:
+        if user_guess == number_to_guess:
             print(f"Hooray! You guessed the number in {guesses} guesses!")
             ask_to_play_again()
-        elif userGuess > numberToGuess and guessesLeft > 0:
+        elif user_guess > number_to_guess and guesses_left > 0:
             print("Too high. Try guessing a little lower this time")
-        elif userGuess < numberToGuess and guessesLeft > 0:
+        elif user_guess < number_to_guess and guesses_left > 0:
             print("Too low. Aim higher this time")
-        elif userGuess != numberToGuess and guessesLeft == 0:
-            print(f"Too bad, you ran out of turns, the number was {numberToGuess}. Better luck next time.")
+        elif user_guess != number_to_guess and guesses_left == 0:
+            print(f"Too bad, you ran out of turns, the number was {number_to_guess}. Better luck next time.")
             ask_to_play_again()
 
 def ask_to_play_again():
@@ -29,7 +29,7 @@ def ask_to_play_again():
         main()
     elif answer == "N" or answer == "n":
         print("Thanks for playing!")
-        guessesLeft = 0
+        guesses_left = 0
 
 if __name__ == '__main__':
     main()
